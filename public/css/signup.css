@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("../img/index.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+
+.signup-css{
+    width: 400px;
+    box-shadow: 0 0 3px royalblue;
+    background: #ffff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+}
+
+.signup-css h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+
+.input-box{
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    outline:  none;
+}
+
+#email {
+    background-color: white;
+    background-image: url("../img/email.png");
+    background-size: 15px;
+    background-position: 4px 10px;
+    background-repeat: no-repeat;
+    padding-left: 20px;  
+}
+
+#password {
+    background-color: white;
+    background-image: url("../img/pssw.png");
+    background-size: 15px;
+    background-position: 4px 10px;
+    background-repeat: no-repeat;
+    padding-left: 20px;  
+}
+
+button{
+    color: #ffff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#facebook{
+    background-image: url("../img/facebook.png");
+    background-size: 25px;
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+    padding-left: 20px;  
+}
+
+#gmail{
+    background-image: url("../img/gmail.png");
+    background-size: 25px;
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+    padding-left: 20px;  
+}
+
+#apple{
+    background-image: url("../img/apple.png");
+    background-size: 25px;
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+    padding-left: 20px;  
+}
+
+.signup-btn{
+    background-color: royalblue;
+}
+
+.facebook-btn{
+    background-color: blue;
+}
+
+.gmail-btn{
+    background-color: red;
+}
+
+.apple-btn{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.or{
+    background: #ffff;
+    width: 160px;
+    margin: -19px auto 10px;
+}
+
+img{
+    width: 200px;
+}
