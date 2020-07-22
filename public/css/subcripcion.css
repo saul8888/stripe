@@ -1,42 +1,188 @@
-/**
-* Shows how you can use CSS to style your Element's container.
-*/
-.MyCardElement {
-    height: 40px;
-    padding: 10px 12px;
-    width: 100%;
-    color: #32325d;
-    background-color: white;
-    border: 1px solid transparent;
-    border-radius: 4px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background: white;
+  /*
+  margin: 0 10px;
+  */
+}
+
+/**********/
+.wrapper {
+  width: 780px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .option_item {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 80px;
+  margin: 10px;
+}
+
+.container .option_item .checkbox {
+  position: absolute;
+  top: 32px;
+  left: 6px;
+  z-index: 1;
+  opacity: 1;
+  color: #329e44;
+}
+
+.option_item .option_inner {
+
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 5px solid transparent;
+  position: relative;
+}
+
+/* Labels for checked inputs */
+.container input[type="radio"]:checked + label {
+  border-width: 3px;
+  border-color: #329e44;
+  color: #329e44;
+}
+
+/**********/
+
+.payment{
+  background: #b0cde6;
+  max-width: 450px;
+  margin-right: 250px;
+  margin-top: 100px;
+  height: auto;
   
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-  }
-  
-  .MyCardElement--focus {
-    box-shadow: 0 1px 3px 0 #cfd7df;
-  }
-  
-  .MyCardElement--invalid {
-    border-color: #fa755a;
-  }
-  
-  .MyCardElement--webkit-autofill {
-    background-color: #fefde5 !important;
-  }
-/*--------------------------------------------*/
-#payment{
-  width: 400px;
-  box-shadow: 0 0 3px royalblue;
-  background: #ffff;
-  padding: 20px;
-  margin-left: 60%;
-  margin-top: 10%;
+  padding: 21px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.payment h1{
+  font-size: 20px;
+}
+
+.payment h2{
+  font-size: 20px;
+  color: #0d3c61;
+}
+
+h5{
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.payment span{
+  margin-top: 2px;
+  color: #6f7d88;
+  font-size: 15px;
+  font-family: sans-serif;
+  padding-left: 21px;
+  width: 80%;
+}
+
+#message3{
+  width: 20%;
+}
+
+.payment img{
+  width: 50px;
+}
+
+.payment p{
+  margin-top: 10px;
+  color: #6f7d88;
+  font-size: 12px;
+  font-family: sans-serif;
   text-align: center;
 }
 
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.btn{
+  margin-top: 20px;
+  background: #2196F3;
+  padding: 12px;
+  text-align: center;
+  color: #f8f8f8;
+  border-radius: 40px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.information{
+  text-align: center;
+  background: white;
+  max-width: 360px;
+  margin-left: 550px;
+  margin-top: 100px;
+
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+}
+
+.information h2 {
+  margin-bottom: 60px;
+}
+
+.information p {
+  background-image: url("../img/subcription/check.png");
+  background-size: 30px;
+  background-position: 4px 10px;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding-left: 40px;
+  margin-bottom: 50px;
+}
+
+.information div {
+  color: #6f7d88;
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.information img{
+  width: 300px;
+}
+
+
+/*
+.form .label{
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+*/
+/*
 .input{
   padding: 13px 0px 13px 25px;
   width: 100%;
@@ -49,3 +195,4 @@
   font-size: 16px;
   color: #555555;
 }
+*/

@@ -24,11 +24,17 @@ export class PaymentController {
         return this.paymentService.newCustomer(status)  
     }
 
+    @Post('/create-subscription')
+    subcription(
+        @Body() status: any,
+    ){
+        return this.paymentService.subcription(status)  
+    }
+
     @Get('/checkout')
     @Render('checkout.html')
     check() {
         return { message: 'Hello saul!' };
     }
-
-
+    
 }

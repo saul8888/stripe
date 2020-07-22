@@ -3,9 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -17,85 +14,112 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/subcripcion.css">
+    <title>Payment Checkout Form</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" type="text/css" href="css/subcripcion.css">
+
 </head>
 
 <body>
 
-    <div id="payment">
-        <!-- Elements will create input elements here -->
-        <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Monthly</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$8.99 <small class="text-muted">/ mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>definition</li>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-                </div>
-            </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Yearly</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$59.99 <small class="text-muted">/ year</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>definition</li>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-                </div>
-            </div>
-        </div>
-        <!-- Elements will create input elements here -->
 
-        <form id="subscription-form">
+    <div class="row">
+
+        <div class="information col">
+            <h2 id="message1">Try Mimo Pro free for a week!</h2>
+            <p>
+                Learn the skill of the century, a few minutes at time
+            </p>
+            <p>
+                Get unlimited access to all courses and challenges
+            </p>
+            <p>
+                Run code and build real-world project on the go
+            </p>
             <hr>
-            <div class="card-group">
-                Card Name
-                <label for="card-name"></label>
-                <input type="text" name="card-name" class="form-control" id="card-name" placeholder="Card Name">
+            <div>
+                More than 5 million peopple use Mimo to learn to code, Mimo users work at
             </div>
-            
-            <div class="card-group">
-                <label for="card-number">
-                    Credit or Debit Card
-                </label>
-                <div id="card-number">
-                    <!-- Elements will create input elements here -->
-                </div>
-            </div>
+            <img src="img/subcription/logo.jpg">
+        </div>
 
-            <div class="card-group">
+        <div class="payment col">
+
+            <h1>Your plan</h1>
+
+
+            <!-- Elements will create input elements here -->
+            <div class="wrapper">
+
+                <div class="container">
+                    <div class="option_item">
+                        
+                        <input type="radio" id="month" class="checkbox" name="radio" value="month" />
+                        <label class="option_inner" for="month">
+                            <div class="name">Monthy $8.99/mo</div>
+                        </label>
+                    </div>
+                    <div class="option_item">
+                        <input type="radio" id="year" class="checkbox" name="radio" value="year" checked />
+                        <label class="option_inner" for="year">
+                            <div class="name">Yearly $59.99/year</div>
+                        </label>
+                    </div>
+                </div>
+        
+            </div>
+            <!-- Elements will create input elements here -->
+
+
+            <h2>Your payment information</h2>
+            <form id="subscription-form" action="">
+                <div class="">
+                    <label for="card-number">Card number:</label>
+                    <div id="card-number"></div>
+                </div>
+                <div class="card-grp">
+                    <div class="card-item">
+                        <label for="card-exp">Expiry date:</label>
+                        <div id="card-exp"></div>
+                    </div>
+                    <div class="card-item">
+                        <label for="card-cvc">CVC:</label>
+                        <div id="card-cvc"></div>
+                    </div>
+                </div>
+
+                <h5>Amount</h5>
                 <div class="row">
-                    <div class="col-md-6">
-                        <label for="card-cvc">
-                            CVC
-                        </label>
-                        <div id="card-cvc">
-                            <!-- Elements will create input elements here -->
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="card-exp">
-                            EXP
-                        </label>
-                        <div id="card-exp">
-                            <!-- Elements will create input elements here -->
-                        </div>
+                    <span id="message2">
+                        You won't be charged until your 7-day free trial ends on Jul 28th, 2020
+                    </span>
+                    <div id="message3">
+                        $59.99
+                        <br>
+                        monthly
                     </div>
                 </div>
-            </div>
+                <hr>
+                <div class="row">
+                    <span>
+                        Your payment info is encrypted and securely stored on Stripe
+                    </span>
+                    <img src="img/subcription/protection.jpg">
+                </div>
+                <div id="card-errors" role="alert"></div>
+                <button class="btn" type="submit" id="button">START 7-DAY FREE TRIAL</button><!--Subscribe-->
+            </form>
+            <p>
+                You will only be charged $59.99 when your 7-day free trial ends. Until then, you can cancel at any time.
+            </p>
+            <p>
+                This site is protected by reCAPTCHA and the Google Privacy Policy. and Terms of Service apply.
+            </p>
+        </div>
 
-            <!-- Used to display Element errors. -->
-            <div id="card-errors" role="alert"></div>
-
-            <button type="submit">Subscribe</button>
-        </form>
     </div>
+
+
     <script src="js/subcripcion.js"></script>
 </body>
 
